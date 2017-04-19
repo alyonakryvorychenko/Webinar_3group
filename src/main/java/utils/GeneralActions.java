@@ -49,9 +49,10 @@ public class GeneralActions {
 
         log ("Click the 'Categories' item in main menu");
         Actions actions = new Actions(driver);
-        actions.moveToElement(catalogueLink)
-        .moveToElement(categoriesLink)
-        .click().build().perform();
+        actions.moveToElement(catalogueLink).perform();
+        actions.moveToElement(categoriesLink).perform();
+        categoriesLink.click();
+        //.build().perform();
 
         //Assert.assertSame();
 
