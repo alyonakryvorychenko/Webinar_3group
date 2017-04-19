@@ -25,7 +25,7 @@ public class WebinarHomeWork2 extends BaseScript {
         log("Open the browser");
         driver = setupDriver();
 
-        //test
+        //main test
         GeneralActions actions = new GeneralActions(driver);
 
         //login to the site
