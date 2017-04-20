@@ -52,9 +52,6 @@ public class GeneralActions {
         actions.moveToElement(catalogueLink).perform();
         actions.moveToElement(categoriesLink).perform();
         categoriesLink.click();
-        //.build().perform();
-
-        //Assert.assertSame();
 
         //create category
         log("Click the 'Create categories' button");
@@ -76,16 +73,6 @@ public class GeneralActions {
         WebElement confirmateMessage = driver.findElement(confirmateMessageCategories);
         Assert.assertTrue(confirmateMessage.isDisplayed());
     }
-
-    //
-
-
-    /*public void createCategoryJS(){
-        wait.until(ExpectedConditions.visibilityOfElementLocated(catalogueLink));
-        JavaScriptExecutor executor = (JavaScriptExecutor)driver;
-        WebElement categoriesLink = driver.findElement(this.categoriesLink);
-        executor.executeScript("arguments[0].click", categoriesLink);
-    }*/
-}
+  }
 
 

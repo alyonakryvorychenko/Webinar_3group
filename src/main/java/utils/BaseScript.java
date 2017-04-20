@@ -12,6 +12,7 @@ public class BaseScript {
     private static WebDriver driver;
 
     public static WebDriver setupDriver() {
+        log("Open the browser");
         String resourcesPath = System.getProperty("user.dir") +
                 File.separator + "src" +
                 File.separator + "main" +
@@ -23,7 +24,11 @@ public class BaseScript {
         //open the browser
         driver.manage().window().maximize();
         return driver;
+    }
 
+    public static void closeDriver(WebDriver driver) {
+        log("Close the browser");
+        driver.quit();
     }
 
     public static void log(String message) {
